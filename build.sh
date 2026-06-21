@@ -1,27 +1,10 @@
 #!/usr/bin/env bash
 # Copyright ©2022-2024 XSans0
 
-# Environment checker
-echo "Checking environment ..."
-for environment in BOT_TOKEN CHAT_ID GITHUB_TOKEN BRANCH; do
-    [ -z "${!environment}" ] && {
-        echo "$environment is not set, bailing out"
-        exit 1
-    }
-done
-
 # Get home directory
 HOME_DIR="$(pwd)"
 
-# Telegram setup
-send_msg() {
-    bash "$HOME_DIR/tg_utils.sh" msg "$1"
-}
-send_file() {
-    bash "$HOME_DIR/tg_utils.sh" up "$1" "$2"
-}
-
-GH_USER=fukiame
+GH_USER=malkist02
 GH_REPO=tc_builds
 
 # Build LLVM
