@@ -9,8 +9,8 @@ on:
         default: 'main'
 
 env:
-  BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-  CHAT_ID: ${{ secrets.CHAT_ID }}
+  BOT_TOKEN: 8624576202:AAFqAW81XXn9Ki1of4GN7pvkCQ6PE2dqVR0
+  CHAT_ID: -1002287610863
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   RUN_NUM: ${{ github.run_number }}_${{ github.run_attempt }}
   BRANCH: ${{ github.event.inputs.BRANCH }}
