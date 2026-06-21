@@ -39,8 +39,8 @@ send_msg "gh $RUN_NUM: building LLVM"
     --targets AArch64 ARM \
     --lto thin \
     --pgo kernel-defconfig-slim \
-    --clang-vendor-string "Tsukuyomi" \
-    --lld-vendor-string "Kassen"
+    --clang-vendor-string "Teletubies" \
+    --lld-vendor-string "Malkist"
 
 # Check if the final clang binary exists or not
 for file in install/bin/clang-[1-9]*; do
@@ -85,9 +85,9 @@ short_llvm_commit="$(cut -c-8 <<<"$llvm_commit")"
 popd || exit
 llvm_commit_url="https://github.com/llvm/llvm-project/commit/$short_llvm_commit"
 clang_version="$("$HOME_DIR"/install/bin/clang --version | head -n1 | cut -d' ' -f4)"
-build_date="$(TZ=Asia/Ho_Chi_Minh date +"%Y-%m-%d")"
-tags="Tsukuyomi-Clang-$clang_version"
-file="Tsukuyomi-Clang-$clang_version.tar.gz"
+build_date="$(TZ=Asia/Jakarta date +"%Y-%m-%d")"
+tags="Teletubies-Clang-$clang_version"
+file="Teletubies-Clang-$clang_version.tar.gz"
 
 # Get binutils version
 binutils_version=$(grep "LATEST_BINUTILS_RELEASE" build-binutils.py)
